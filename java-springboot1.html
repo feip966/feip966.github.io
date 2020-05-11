@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Feip-Java专区-初识SpringBoot</title>
+				<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		  <link rel="stylesheet" href="bootstrap.css" type="text/css">
+	</head>
+	<body style="font-family:'宋体'">
+		<h2 style="color: orange;">初识SpringBoot,与SpringBoot相遇</h2>
+		<h4 style="color: red;">本文出自博客主--一个java小白之手,如有错误之处还请移步<a href="index.html">门户</a>发送邮件给我哦~</h4>
+		<h3>什么是SpringBoot?</h3>
+		<p>此处可参考<a href="https://spring.io/projects/spring-boot">SpringBoot官方网站</a>,官方网站中为我们介绍了SpringBoot的主要功能如下<br>
+		<span style="color: dodgerblue;">		Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run".<br />
+		We take an opinionated view of the Spring platform and third-party libraries so you can get started with minimum fuss. <br />
+		Most Spring Boot applications need minimal Spring configuration.<br /></span>
+		<h5>这段话的翻译如下</h5>
+				<span style="color: dodgerblue;">Spring Boot使创建独立的、生产级的基于Spring的应用程序变得很容易，您可以“直接运行”这些应用程序。<br />
+		 我们对Spring平台和第三方库有自己的看法，这样您就可以轻松入门了。<br />
+		大多数Spring启动应用程序需要最少的Spring配置。<br /></span>
+		<h5>通过上述的文字我们可以总结出:</h5>
+		1.SpringBoot是Spring的产物.<br />
+		2.SpringBoot可以使我们创建独立的,生产级的spring应用程序变得更容易,我们要做的="just run".<br />
+		<h5>那么,SpringBoot到底是什么东西?</h5>
+		Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来简化新Spring应用的初始搭建以及开发过程。<br>
+		该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置。<br>
+		通过上述文字我们可以了解到,Spring使我们搭建Spring项目变的容易了很多,那么,容易在哪儿了呢?<br />
+		首先,Springboot采用组合注解的方式,将Spring需要用到的配置,封装在@SpringbootApplciation注解中.<br />
+		我们只需要创建一个类,给他加上@SpringBootApplication注解,即可达到我们SSM常规的配置文件的功能.<br />
+		于是,我们免去了SSM整合的诸多配置文件,一个注解即可达到效果<br />
+		对于这个注解为什么这么神奇的分析请看文章<a href="java-springboot2.html">SpringBoot关键注解@SpringBootApplication分析</a><br />
+		当然,SpringBoot不仅仅是帮我们省去了配置文件.他还帮我们处理了我们百分之九十以上的依赖版本.<br>
+		我们在使用SpringBoot时,需要在pom.xml导入一个父类.<br>
+		<textarea>
+			   <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.6.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>>
+		</textarea><br />
+		这个父类内部帮我们封装了多数我们需要用到的依赖的版本,让我们不必担心版本冲突引来不必要的麻烦<br />
+		我们调用依赖的时候,只需要调用相应依赖的starter(启动器)即可<br />
+		另外我们的Springboot的启动速度是非常快速的,我们的SMM框架使用的时候,每次Run都要等待很久<br />
+		而我们的SpringBoot,短短几秒就可以达到启动的效果.<br />
+		至于,为什么启动这么快呢.我[个人]的看法是,SpringBoot省去了许多的配置文件,<br />
+		减少了编译所需的时间应该是其中的一个原因,至于其它的原因,还没有深究<br />
+		</p>
+		<h4 style="color: green;">到这里,你认识SpringBoot了么?让我用一句话概述他就是:<br>
+		SpringBoot是利用组合注解@SpringBootApplicaiton并通过parent标签配合启动器实现依赖版本管理来简化Spring开发的一个优秀框架<br />
+		</h4>
+				<hr />
+		文章到此结束,文章内容为本人原创.如有侵权或错误之处,请查看文章第二行红色字体移步门户发送邮件给我,转载请注明出处https://feip966.github.io/.<br />
+		<a class="btn btn-info" href="main.html">返回首页</a>
+	</body>
+</html>
