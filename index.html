@@ -3,19 +3,40 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Feip-Private website/blog|Feip 私人博客网站</title>
-		<link href="bitbug_favicon (1).ico" rel="icon"  type="image/x-icon" controlsList=”nodownload”/ >
-		<audio src="/audio/Am1r - Right Now (Na Na Na).mp3" autoplay="autoplay" controls="controls"></audio>
+		<link href="bitbug_favicon (1).ico" rel="icon"  type="image/x-icon" / >
+		<audio src="/audio/Am1r - Right Now (Na Na Na).mp3" autoplay="autoplay" controls="controls" ></audio>
 		    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
-		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		     <!-- 引入 Bootstrap -->
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<style>
+	#screentip {
+		width: 0px;
+		height: 0px;
+		font-size: 0px;
+	}
+	@media only screen and (max-width:1320px ) {
+		#topimg {
+			width: 500px;
+			
+		
+		}
+		#screentip {
+			width: auto;
+			height: auto;
+			font-size: 14px;
+		}
+		
+	}
+</style>
 	</head>
 	<body style="background-color: white;">
 		<div class="container" style="background-color: lightgray">
 			<div style="text-align: center;">
 				<h2>Feip-Private Website/Blog|Feip私人网站/博客</h2>
-				<img src="/img/indextop.png" />
+				<img src="/img/indextop.png" id="topimg"/>
 							<table align="center" valign="middle" class="table table-striped">
 				<tr>
 					<td><span id="visitorInfo"></span></td>
@@ -29,7 +50,7 @@
 				</tr>
 				<tr>
 					<td>更多内容请
-						<a class="btn btn-info" href="http://www.lgp666.xyz/main.html">进入主页</a>
+						<a class="btn btn-info" href="http://lgp666.xyz" >进入主页</a>
 					</td>
 				</tr>
 				<tr>
@@ -49,8 +70,17 @@
 				</tr>
 				<tr>
 					<td>
-						<span>友情连接:<a href="http://only1studio.cn">only1studio技术分享Blog</a>&nbsp;&nbsp;
-						<a href="https://bcxmym.github.io">小白技术分享</a></span>
+						<span>友情连接:<a href="http://only1studio.cn" target="_blank">only1studio技术分享Blog</a>&nbsp;&nbsp;
+						<a href="https://bcxmym.github.io" target="_blank">小白技术分享</a></span><br>
+						<span>常用连接:
+						<a href="#">博主管理</a>&nbsp;&nbsp;
+						<a href="https://www.baidu.com" target="_blank">百度搜索</a>&nbsp;&nbsp;
+						<a href="https://www.gitee.com" target="_blank">Gitee</a>&nbsp;&nbsp;
+						</span>
+						<div id="screentip">
+							<span  style="color: red;font-family:'宋体'"  >检测到您可能是手机或小屏访问,页面显示可能会异常,请尽量使用电脑大屏访问</span>
+						</div>
+						
 					</td>
 				</tr>
 			</table>
@@ -65,6 +95,8 @@
 	</footer>
 </html>
 <script type="text/javascript">
-	  alert("欢迎你,来自"+returnCitySN['cname']+"的朋友!ip地址:"+returnCitySN['cip'] );
+	  alert("欢迎你,来自"+returnCitySN['cname']+"的访客!");
+	  
 	  $('#visitorInfo').html("当前访客信息: IP地址:"+returnCitySN['cip']+"         访客来自:"+returnCitySN['cname']+"          访问时间:"+new Date())
+	  
 </script>
